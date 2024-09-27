@@ -5,60 +5,87 @@
             <link rel="stylesheet" href="./travel_recommendation.css">
         </head>
         <body>
-            <nav>
-                <h1>Travel Recommendation</h1>
-                <a href="#Home">Home</a>
-                <a href="#About">About</a>
-                <a href="#Contact">Contact</a>
-                <input type="text" id="Search">
-                <button id="search_btn">Search</button>
-                <button id="clear_btn">Clear</button>
-            </nav>
+            <nav><ul>
+                <li><h1>Travel Recommendation</h1></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li>
+                    <div class="search_container">
+                        <input type="text" id="Search" placeholder="Search for a place">
+                        <button id="search_btn">Search</button>
+                        <button id="clear_btn">Clear</button>\
+                    </div>
+                </li>
+            </ul></nav>
 
             <div id="Home">
-                <h1>EXPLORE DREAM DESTINATION</h1>
-                <p>It encourages exploration of unfamiliar territories, embracing
-                    diverse cultures and landscapes.
-                </p>
+                <div class="container">
+                    <div class="background-image"></div>
+                    <div class="half-content">
+                        <h1>EXPLORE DREAM DESTINATION</h1>
+                        <p>Your gateway to discovering the most enchanting and awe-inspiring locations around the globe. Whether you seek the tranquility of pristine beaches, the adventure of rugged mountains, or the culture of bustling cities, our platform curates the ultimate travel experiences to fulfill your wanderlust. Join us on a journey of exploration and discovery as we uncover the world's hidden gems and help you create unforgettable memories. Start your adventure with us today and turn your travel dreams into reality.</p>
+                    </div>
+                </div>
             </div>
 
+            <div id="results"></div>
+
             <div id="About">
-                <h1>ABOUT US</h1>
-                <p>Welcome to our company! We are a team of passionate dedicated
-                    to provide services regarding traveling to different destinations 
-                    around the world.
-                </p>
-                <div>
-                    <h2>Our Team</h2>
-                    <ul>
-                        <li><div>
-                            <h4>John Doe</h4>
-                            <p>John Doe's Description</p>
-                            <p>CEO</p>
-                        </div></li>
-                        <li><div>
-                            <h4>Celina Thomas</h4>
-                            <p>Celina Thomas' Description</p>
-                            <p>CEO</p>
-                        </div></li>
-                        <li><div>
-                            <h4>Mike Tysen</h4>
-                            <p>Mike Tysen's Description</p>
-                            <p>CEO</p>
-                        </div></li>
-                    </ul>
+                <div class="container">
+                    <div class="background-image"></div>
+                    <div class="content">
+                        <h1>ABOUT US</h1>
+                        <p>Welcome to TravelBloom, your ultimate travel companion. We specialize in creating unforgettable travel experiences tailored to your preferences. Our team of passionate travelers is dedicated to helping you explore the world and make memories that last a lifetime.</p>
+                        <div>
+                            <h2>Our Team</h2>
+                            <ul>
+                                <li><div class="team-member">
+                                    <h4>John Doe</h4>
+                                    <p>John Doe's Description</p>
+                                    <p>CEO</p>
+                                </div></li>
+                                <li><div class="team-member">
+                                    <h4>Celina Thomas</h4>
+                                    <p>Celina Thomas' Description</p>
+                                    <p>CEO</p>
+                                </div></li>
+                                <li><div class="team-member">
+                                    <h4>Mike Tysen</h4>
+                                    <p>Mike Tysen's Description</p>
+                                    <p>CEO</p>
+                                </div></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div id="Contact">
-                <h1>CONTACT US</h1>
-                <ul>
-                    <li><input type="text" id="Name"></li>
-                    <li><input type="text" id="Email"></li>
-                    <li><textarea name="Message" id="Message" cols="30" rows="10"></textarea></li>
-                    <li><button id="Submit"></button></li>
-                </ul>
+                <div class="container">
+                    <div class="background-image"></div>
+                    <div class="content">
+                        <h1>CONTACT US</h1>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" onclick="thankyou()">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+
+            <script src="travel_recommendation.js">
         </body>
     </html>
 </html>
